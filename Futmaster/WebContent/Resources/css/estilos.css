@@ -1,0 +1,511 @@
+body {font-family:Candara, sans-serif;}
+
+.sombra {-webkit-box-shadow: 0 10px 10px #777;
+			-moz-box-shadow: 0 10px 10px #777;
+			box-shadow: 0 1px 10px #777;}
+			
+/* CSS INDEX */
+#principal {background-color: white;
+			margin-top:130px;}
+
+#main-header {background-color:white;
+			height: 130px;
+			width: 100%; 
+			left: 0; 
+			top: 0; 
+			position: fixed;
+}
+
+#logoFut {width:20%;
+		height: 130px;
+		margin-left:5%;}
+		
+#botones {float:right;
+			width:30%;
+			margin-top:2%;
+}
+			
+.boton {background-color:#1B9B1B;
+		width:25%;
+		height:45px;
+		color:white;
+		font-weight:bold;
+		border:none;
+		margin-left:5%;
+		font-size:16px;
+		}
+		
+/*Slider imagenes*/
+
+.slider {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+	width: 50%;
+	float:right;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+/*formulario entrada Index*/
+
+.formOculto {display:none;}
+
+.formVisto {display:block;
+			width:auto;}
+
+#pop-up {background-color: white;
+		width:30%;
+		position:fixed;
+		padding:20px;
+		margin-left:35%;
+		margin-top:4%;}
+		
+.imgForm {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+#avatar {
+    width: 30%;
+    border-radius: 50%;
+}
+
+ .containerForm input {width: 100%;
+    			padding: 12px 20px;
+    			margin: 8px 0;
+    			display: inline-block;
+    			border: 1px solid #ccc;
+    			box-sizing: border-box;}
+
+.containerForm button {background-color: #4CAF50;
+    					color: white;
+    					padding: 14px 20px;
+    					margin: 8px 18px;
+   					 	border: none;
+    					cursor: pointer;
+    					width: 40%;
+    					float:left;
+}
+.containerForm button:hover {
+    opacity: 0.8;
+}
+
+#formCancelar {background-color: #f44336;}
+
+/*----fin Formulario entrada -------*/
+
+.modosIndex {width:65%;
+			margin: auto;
+			clear:both;
+			margin-bottom:2%;
+			margin-top:4%;}
+
+.modosIndex p {
+				font-size:1.2em;
+				color:grey;
+				margin:3%;}
+				
+.modosIndex hr {width:10%;
+				box-shadow: 0 0px 3px 0px grey;
+}
+
+.modosIndex h2 {color: #1B9B1B;
+				}
+				
+.modosIndex div {width:40%;
+				float:left;
+				margin:3%;
+				height:320px;
+				}
+.modosIndex h1, p, h2 {text-align:center;}
+				
+.logosCampeonatos {width:60px;
+				display:block;
+				margin:auto}
+				
+
+#ligasIndex {background-image:url("../images/abstract-1846813_1920.jpg");
+			height:300px;
+			clear:both;}
+
+#ligasIndex h2 {color:white;
+			text-shadow: 1px 2px black;}
+
+#ligasIndex div {width:14%;
+				float:left;
+				margin:1%;
+				margin-top:3.5%;}
+
+.ligasIndexImg {display:block;
+				margin:auto;
+}
+
+#imgFin {width:40%;
+		height:300px;
+		display:block;
+		margin:auto;
+		margin-top:5%;
+		margin-bottom:5%;
+		}
+			
+/*CSS Generales Paginas*/
+
+.fondo {background-image:url("../images/abstract-1846813_1920.jpg");
+		}
+		
+.contenidoPag {width:70%;
+			margin:auto;
+}
+			
+.tituloPag, .subPag {height:45px;
+					float:left;
+					text-align:center;
+					display:table;
+					}
+
+.cabPag {background-color: white;
+		width:90%;
+		margin:10px auto;
+		height:45px;}
+		
+.tituloPag {background:linear-gradient(#4A4948 , #343333);
+			width:30%;
+			font-size:24px;
+			color:#BDBDBC;
+			font-weight:bold;}
+			
+.subPag {width:60%;}
+
+.textocab {display:table-cell;
+			vertical-align:middle;}
+			
+ .divContenedor {width:90%;
+ 				margin:10px auto;}
+		
+.tablas {background-color:white;
+		color:#2C3E50;
+		margin-bottom:5%;}
+		
+.tablas th {background-color:#E5E8E8;
+					height:20px;}
+					
+.textoVerde {color:#1B9B1B;}
+		
+/* Pagina Plantillas */		
+							
+#idBanderas {background:linear-gradient(#4A4948 , #343333);
+			height:110px;}
+
+.banderas {width:26px;
+			margin:1.3%;}
+
+.banderas:hover {opacity:0.8;}
+
+#tablaPlantilla {width:100%;}
+			
+.titTablas {background:linear-gradient(#4A4948 , #343333);
+					color:#BDBDBC;
+					height:30px;
+					font-size:20px;
+					font-weight:bold;}
+					
+.tdCentrada {text-align:center;}
+					
+#tablaPlantilla td {height:50px;
+					border-bottom: solid 1px #EAECEE;}
+					
+.colorPuesto {width:10px;}
+
+.delantero {background-color:#C0392B;}
+
+.medio {background-color:#2980B9;}
+
+.defensa {background-color:#F39C12;}
+
+.portero {background-color:#27AE60;}	
+
+.imgJugador {height:50px;}	 
+
+.tdImg {width:60px;}
+
+/* Pagina clasificacion */
+
+#cGeneral, #cJornada {width:45%;
+					float:left;
+					margin:2.5%;
+					}
+					
+.tdClasif {width:30px;
+			font-weight:bold;
+			font-size:18px;}
+							
+/* Pagina alineacion */
+
+.tablaAlineacion {background-color:#D8D8D8;
+				width:35%;
+				float:right;
+				margin-right:5%;
+				margin-bottom:5%;}
+				
+.tablaAlineacion td {border-bottom: solid 1px #EAECEE;
+					height:30px;}
+					
+.tablaAlineacion p {margin:0;}
+				
+.delanteroAl {color:#C0392B;}
+
+.medioAl {color:#2980B9;}
+
+.defensaAl {color:#F39C12;}
+
+.porteroAl {color:#27AE60;}
+
+.pequeAl {font-size:12px;}
+
+#divAlineacion {width:50%;
+				background:linear-gradient(#4A4948 , #343333);
+				height:600px;
+				float:left;
+				margin-left:5%;
+				margin-top:2%;
+				text-align:center;
+				position:relative;}
+
+#campoAlineacion {margin-top:25px;
+				width:90%;
+				height:550px;
+				}
+				
+.imgAlineacion {width:50px;}
+
+.jugadoresAlineacion {width:80px;}
+
+.rotuloAlineacion {font-size:12px;
+					margin:0;}
+				
+.jugadoresAlineacion {position: absolute;}
+			
+#delantero1 {left:110px;
+			top:120px;
+}
+
+#delantero2 {left:300px;
+			top:120px;
+}
+#medio1 {left:70px;
+		top:240px;
+}
+#medio2 {left:160px;
+		top:240px;
+}
+#medio3 {left:250px;
+		top:240px;
+}
+#medio4 {left:340px;
+		top:240px;
+}
+
+#defensa1 {left:70px;
+		top:360px;
+}
+
+#defensa2 {left:160px;
+		top:360px;
+}
+
+#defensa3 {left:250px;
+		top:360px;
+}
+
+#defensa4 {left:340px;
+		top:360px;
+}
+
+#portero {left:195px;
+		top:500px;
+}
+
+#botonAlinear {width:90%;
+				margin-top:5px;
+				margin-left:5%;
+				height:35px;
+				background:linear-gradient(#A5DC1C, #466102);
+				font-size:20px;
+				color:white;}
+				
+#botonAlinear:hover {cursor: pointer;}
+
+/* Pagina calendario */
+
+.calendario {width:30%;
+			float:left;
+			margin:1.5%;}
+			
+.calendario table {width:100%;}
+
+/* Pagina administracion */
+
+#tablaAdmin {width:50%;
+			float:left;
+			margin-left:5%;}
+			
+.verPlantilla {background:linear-gradient(#A5DC1C, #466102);
+				margin-left:3%;}
+
+.verPlantilla:hover {cursor: pointer;}
+
+#tablaAdmin td {border-bottom: solid 1px #EAECEE;
+				padding-bottom:8px;}
+
+#tablaAdmin p {margin:2%;}
+
+#tablaAdmin span {margin-left:4%;}
+
+.oculto {display:none;}
+
+/* Pagina perfil */
+
+#formPerfil {width:90%;
+			background-color:#E5E8E8;
+			margin:auto;}
+
+/*CSS HEADER*/
+
+#containerHeader {width:70%;
+			background-color:white;
+			margin:auto;
+			margin-top:10px;}
+
+#perfil {width:25%;
+		background-image:url("../images/texture.jpg");}
+
+#info {width:50%;
+		background-color:black;}
+
+#logoMundial {width:25%;
+			float:right;}
+
+#perfil, #info, #logoMundial {height:130px;
+								float:left;
+								}
+#fotoperfil {width:60px;
+			display:block;
+			margin:auto;
+			margin-bottom:8px;}
+
+#perfil a {text-decoration: none;
+    				color:#BDBDBC;
+    				font-size:12px;
+    				margin:13%;}
+    				
+#perfil a:hover {color:#1B9B1B;}
+
+#nombre {color:#C8FE2E;
+		font-weight:bold;
+		margin:5px;}
+
+#info h3 {color:#C8FE2E;
+		font-weight:bold;
+		text-align:center;
+		margin:5px;}
+		
+#tabla1, #tabla2 {color:white;
+				font-size:13px;
+				float:left;
+				margin-left:8%;
+				margin-top:2%;}
+		
+#tabla1 {width:45%;}
+
+#tabla2 {width:20%;}
+
+.celda1 {font-weight:bold;
+		font-size:14px;}
+		
+.alignDcha {text-align:right;}
+
+.negativo {color:red;}
+
+nav {background:linear-gradient(#4A4948 , #343333);
+	color:#BDBDBC;
+	clear:both;
+	height:35px;}
+	
+nav ul {list-style-type: none;
+		margin: 0;
+    	padding: 0;
+    	}
+    	
+nav li {float:left;
+		width: 16%;
+		height:35px;}
+		
+nav li:hover {background:linear-gradient(#A5DC1C, #466102);
+			}
+    	
+nav li>a {display: block;
+    	 text-align: center;
+    	padding: 10px 16px;
+    	text-decoration: none;
+    	color:#BDBDBC;
+    	}
+  
+nav li>a:hover {color:black;
+			text-shadow: 1px 1px #9DA498;}
+
+
+/* CSS FOOTER */
+footer {background: linear-gradient(#4A4948 , #343333);
+		clear:both;
+}
+footer div {text-align:center;
+				margin-top:2%;
+}
+
+footer p {text-align:center;
+				margin-top:2%;
+} 
+
+footer span a {text-decoration:none;
+		color:#BDBDBC;
+		margin:2%;
+		}
+		
+footer a:hover {color:white;
+				font-weight:bold;}
+				
+footer img {margin:1.5%;
+			width:3%;
+			margin-bottom:3%;}
+			
+			
