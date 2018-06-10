@@ -58,7 +58,7 @@
 		<ul>
 			<li><a href="Controlador?op=toAlineacion&formAlineacion=no">Alineación</a></li>
 			<li><a href="Controlador?op=toClasificacion">Clasificación</a></li>
-			<li><a href="Controlador?op=toMercado">Mercado</a></li>
+			<li><a href="Controlador?op=toMercado&cambiarTransferibles=no">Mercado</a></li>
 			<li><a href="Controlador?op=toPlantillas&seleccion=Alemania">Plantillas</a></li>
 			<li><a href="Controlador?op=toAdministracion&id=<%=equipo.getId()%>">Administración</a></li>
 			<li><a href="Controlador?op=toCalendario">Calendario</a></li>

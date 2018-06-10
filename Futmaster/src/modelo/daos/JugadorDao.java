@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 import modelo.daos.interfaces.JugadorDaoInterfaz;
-import modelo.entidades.Equipo;
 import modelo.entidades.Jugador;
 import util.Conexion;
 
@@ -278,6 +277,131 @@ private Map<Integer, String> seleccionesMap = null;
 		}
 		return lista;
 	}
-	
+//MERCADO
+	@Override
+	public List<Jugador> getJugadoresEnVenta() {
+		cargarSelecciones();
+		List<Jugador> lista = new ArrayList<Jugador>();
+		String query =  "select * from jugadores where en_venta = 1";
+		Connection cn = Conexion.abrirConexion();
+		try
+		{
+			Statement st = cn.createStatement();
+			ResultSet rs = st.executeQuery(query.toString());
+			while (rs.next())
+			{
+				Jugador j = new Jugador();
+				j.setId(rs.getInt("id"));
+				j.setNombre(rs.getString("nombre"));
+				j.setEquipo(equipoDao.getEquipo(rs.getInt("id_equipo")));
+				j.setPrecio(rs.getInt("precio"));
+				j.setPuesto(rs.getString("puesto"));
+				j.setPuntos(rs.getInt("puntos"));
+				j.setSeleccion(seleccionesMap.get(rs.getInt("id_seleccion")));
+				j.setAlineado(rs.getBoolean("alineado"));
+				j.setEn_venta(rs.getBoolean("en_venta"));
+				lista.add(j);
+			}
+			
+		}catch (SQLException e) {
+			
+			e.printStackTrace();
+		}finally
+		{
+			try {
+				Conexion.cerrarConexion(cn);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		
+		}
+		return lista;
+
+	}
+	@Override
+	public int changeJugadoresEnVenta(List<Integer> trasferibles) {
+		// TODO Auto-generated method stub
+				String consulta = "UPDATE jugadores SET en_venta = 1 where id IN(";
+				for(Integer i : trasferibles) {
+					consulta += i+", ";
+				}
+				consulta = consulta.substring(0, consulta.length()-2);
+				consulta += ");";
+				
+				Connection cn = Conexion.abrirConexion();
+				
+				int filas=0;
+				try {
+					Statement st = cn.createStatement();
+					filas = st.executeUpdate(consulta);
+				}catch (SQLException e) {
+					
+					e.printStackTrace();
+				}finally
+				{
+					try {
+						Conexion.cerrarConexion(cn);
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				
+				}
+				
+		return filas;
+	}
+
+	//ponemos a no transferibles a todos los los jugadores de futmondo:
+	@Override
+	public int eliminarTransferibles() {
+		String consulta = "UPDATE jugadores SET en_venta = 0 where id_equipo = 11"; 
+		Connection cn = Conexion.abrirConexion();
+		
+		int filas=0;
+		try {
+			Statement st = cn.createStatement();
+			filas = st.executeUpdate(consulta);
+		}catch (SQLException e) {
+			
+			e.printStackTrace();
+		}finally
+		{
+			try {
+				Conexion.cerrarConexion(cn);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		
+		}
+		return filas;
+	}
+
+	@Override
+	public List<Integer> getIdsJugadoresByEquipo(int equipo) {
+		List<Integer> listaIds =new ArrayList <Integer>();
+		String query =  "select * from jugadores where id_equipo ="+equipo;
+		Connection cn = Conexion.abrirConexion();
+		try
+		{
+			Statement st = cn.createStatement();
+			ResultSet rs = st.executeQuery(query.toString());
+			while (rs.next())
+			{
+				listaIds.add(rs.getInt("id"));
+			}
+			
+		}catch (SQLException e) {
+			
+			e.printStackTrace();
+		}finally
+		{
+			try {
+				Conexion.cerrarConexion(cn);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		
+		}
+		return listaIds;
+	}
 
 }

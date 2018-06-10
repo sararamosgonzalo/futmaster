@@ -15,9 +15,11 @@ public class Conexion {
 	try{	
 	
 		Class.forName("com.mysql.jdbc.Driver");
-		String servidor = "jdbc:mysql://mysql21969-mysql.jelastic.com/futmaster";
+		//String servidor = "jdbc:mysql://mysql21969-mysql.jelastic.com/futmaster";
+		String servidor = "jdbc:mysql://localhost/futmaster";
 	    String usuarioDB="root";
-	    String passwordDB="EROeqs80156";
+	   // String passwordDB="EROeqs80156";
+	    String passwordDB="ROOT";
 	    con= DriverManager.getConnection(servidor,usuarioDB,passwordDB);
 	}
 	catch(ClassNotFoundException ex)

@@ -12,5 +12,8 @@ public interface JugadorDaoInterfaz {
 	int crearAlineacion(String[] alineados);
 	int eliminarAlineacion (int equipo);
 	List<Jugador> getAlineadosByEquipo(int equipo);
-	
+	List<Jugador> getJugadoresEnVenta();
+	int changeJugadoresEnVenta(List<Integer> trasferibles);
+	int eliminarTransferibles();
+	List<Integer> getIdsJugadoresByEquipo(int equipo);
 }

@@ -55,7 +55,9 @@ public class Controlador extends HttpServlet {
 		if(op.equals("toPerfil")) {
 			url="/Perfil";
 		}
-		
+		if(op.equals("toMercado")) {
+			url="/Mercado";
+		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
